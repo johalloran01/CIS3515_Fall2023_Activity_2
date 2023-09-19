@@ -14,7 +14,9 @@ class MainActivity : AppCompatActivity() {
         val displayTextView = findViewById<TextView>(R.id.textDisplay)
 
         /* Step 1: Populate this array */
-        //val numberArray = Array Of Numbers
+        //Create an array, and populate it with incrementing numbers starting at 0
+        //https://kotlinlang.org/docs/arrays.html#primitive-type-arrays
+        val numberArray = IntArray(100) {it * 1}
 
         /* Step 2: Create adapter to display items from array in Spinner */
         //spinner.adapter = ArrayAdapter...
