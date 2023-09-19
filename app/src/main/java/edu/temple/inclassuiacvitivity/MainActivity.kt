@@ -16,10 +16,13 @@ class MainActivity : AppCompatActivity() {
         /* Step 1: Populate this array */
         //Create an array, and populate it with incrementing numbers starting at 0
         //https://kotlinlang.org/docs/arrays.html#primitive-type-arrays
-        val numberArray = IntArray(100) {it * 1}
+        val numberArray = Array(100) {it * 1}
 
         /* Step 2: Create adapter to display items from array in Spinner */
-        //spinner.adapter = ArrayAdapter...
+        //Created an adapter to display the items from numberArray
+
+        val adapter = ArrayAdapter(this, android.R.Layout.simple_spinner_dropdown_item, numberArray)
+        spinner.adapter = adapter
 
 
         // Step 3: Change TextView's text size to the number selected in the Spinner */
